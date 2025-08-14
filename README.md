@@ -61,7 +61,7 @@ git lfs pull
 ### 2. Create a virtual environment
 
 ```bash
-python -m venv venv
+python3 -m venv venv
 source venv/bin/activate  # On Linux/macOS
 venv\Scripts\activate     # On Windows
 ```
@@ -81,10 +81,14 @@ You can use the included `dataset_downloader.py` to download the required datase
 - **Leaf detection** (YOLOv11 training)
 - **Disease classification** (Custom CNN / EfficientNetB3)
 
+(Since Datasets are being downloaded using Kaggle, ensure Kaggle API credentials are set.
+Place kaggle.json in ~/.kaggle/ or set environment variables.
+The kaggle.json file (API token) can be downloaded from: https://www.kaggle.com/account)
+
 Run:
 
 ```bash
-python dataset_downloader.py
+python3 dataset_downloader.py
 ```
 
 ---
@@ -94,7 +98,7 @@ python dataset_downloader.py
 After installing dependencies and downloading models:
 
 ```bash
-python main.py
+python3 main.py
 ```
 
 - Click **Load Image** to select a plant image.
