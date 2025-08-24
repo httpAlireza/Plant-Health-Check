@@ -27,22 +27,23 @@ It uses **YOLOv11** for **leaf detection** and a **TensorFlow/Keras-based classi
 ```
 plant-health-check/
 │
-├── main.py                      # PyQt5 GUI application
-├── leaf_detector.py             # YOLOv11 leaf detection
-├── disease_classifier.py        # TensorFlow/Keras disease classification
-├── dataset_downloader.py        # Dataset download & preparation script
-│                
-├── disease_classifier_customCNN.ipynb       # Jupyter notebook for custom CNN classifier training
-├── disease_classifier_EfficientNetB3.ipynb  # Jupyter notebook for EfficientNetB3 classifier training
-├── leaf_detector_YOLO11n.ipynb              # Jupyter notebook for YOLOv11n leaf detection training
-├── leaf_detector_YOLO11x.ipynb              # Jupyter notebook for YOLOv11x leaf detection training
+├── main.py                                # PyQt5 GUI application
+├── leaf_detector.py                       # YOLOv11 leaf detection
+├── disease_classifier.py                  # TensorFlow/Keras disease classification
+├── dataset_downloader.py                  # Dataset download & preparation script
 │
-├── requirements.txt             # Python dependencies
+├── notebooks/                             # Jupyter notebooks for training & experiments
+│   ├── disease_classifier_customCNN.ipynb       # Custom CNN disease classifier training
+│   ├── disease_classifier_EfficientNetB3.ipynb  # EfficientNetB3 disease classifier training
+│   ├── leaf_detector_YOLO11n.ipynb              # YOLOv11n leaf detection training
+│   └── leaf_detector_YOLO11x.ipynb              # YOLOv11x leaf detection training
 │
-├── model-checkpoints/           # Saved trained models for disease classification
-├── yolo-runs/                   # Saved outputs from YOLO training
+├── requirements.txt                       # Python dependencies
 │
-└── README.md                    # Project documentation
+├── model-checkpoints/                     # Saved trained models for disease classification
+├── yolo-runs/                             # Saved outputs from YOLO training
+│
+└── README.md                              # Project documentation
 ```
 
 ---
