@@ -6,13 +6,6 @@ from tensorflow.keras.applications.efficientnet import preprocess_input
 MODEL_PATH = './model-checkpoints/efficientNetB3_best.keras'
 
 
-def _preprocess_leaf_tf(leaf_img, target_size=(224, 224)):
-    img_resized = cv2.resize(leaf_img, target_size)
-    img_rgb = cv2.cvtColor(img_resized, cv2.COLOR_BGR2RGB)
-    img_array = img_rgb.astype("float32") / 255.0
-    return np.expand_dims(img_array, axis=0)
-
-
 class DiseaseClassifier:
     def __init__(self, image_size=(224, 224)):
         self.model = tf.keras.models.load_model(MODEL_PATH)
